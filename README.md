@@ -9,4 +9,8 @@ Void type incomplete, memory amount unknown
 Objects in memory can use more than 1 byte of memory address, more bytes=more unique values that can be stored in that memory
 Sizeof function gives size of data type’s memory allocation (can vary based on architecture)
 Signed integer includes sign of integer as first bit (default), 8 bit integer can safely hold 2^8=256 possible values so signed int can be -128 to 127 (results vary if you add/subtract 1 at end, called overflow, can result in wraparound ex. 127 + 1 = -128)
-Unsigned integer ignores sign/uses all 8 bits for int value (0 to 255), use if no negatives needed, easier to overflow since lower limit is 0, signed/unsigned operations generally converted to unsigned
+Unsigned integer ignores sign/uses all 8 bits for int value (0 to 255), use if no negatives needed, easier to overflow since lower limit is 0, signed/unsigned operations generally converted to unsigned (can cause issues), good for embedded systems when performance counts
+Can use special int types with specified sizes, ex. std::int8_t has 1 byte always, may be nonexistent/slower on some architectures
+Can also use guaranteed int types, ex. std::int_fast32_t is fastest int type available with at least 4 bytes, std::uint_least32_t is smallest int type available with at least 4 bytes (not necessarily fastest to process), can produce unexpected behavior depending on architecture
+Best practice to use int when size doesn't matter, std::int#_t when guaranteed range needed, std::uint#t when bit manipulation/well-defined wrap-around behavior needed, avoid short & long/unsigned types for quantities/8 bit fixed integers (use char which can cause issues)/fast & least when possible
+std::size_t is implementation defined unsigned integral type, imposes upper limit on size of objects created in system, varies depending on architecture
