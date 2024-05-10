@@ -9,4 +9,4 @@ Void type incomplete, memory amount unknown
 Objects in memory can use more than 1 byte of memory address, more bytes=more unique values that can be stored in that memory
 Sizeof function gives size of data type’s memory allocation (can vary based on architecture)
 Signed integer includes sign of integer as first bit (default), 8 bit integer can safely hold 2^8=256 possible values so signed int can be -128 to 127 (results vary if you add/subtract 1 at end, called overflow, can result in wraparound ex. 127 + 1 = -128)
-Unsigned integer ignores sign/uses all 8 bits for int value (0 to 255), use if no negatives needed, easier to overflow since lower limit is 0
+Unsigned integer ignores sign/uses all 8 bits for int value (0 to 255), use if no negatives needed, easier to overflow since lower limit is 0, signed/unsigned operations generally converted to unsigned

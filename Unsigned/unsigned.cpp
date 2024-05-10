@@ -11,5 +11,10 @@ int main()
     x = 65537; // 65537 is out of our range, so we get modulo wrap-around
     std::cout << "x is now: " << x << '\n';
 
+    unsigned int u = 2;
+    signed int s = 3;
+
+    std::cout << u - s << '\n'; // 2 - 3 = 4294967295
+
     return 0;
 }
