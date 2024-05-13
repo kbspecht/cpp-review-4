@@ -17,4 +17,5 @@ std::size_t is implementation defined unsigned integral type, imposes upper limi
 Floating point types are decimals (decimal floats depending on number of decimal digits wanted), also different float representations with different byte amounts, all floats signed, float 4 bytes (add f at end)/double 8 bytes (default), may use scientfic notation
 Floating point has default of 6 significant digits, can change with std:setprecision(digits) in iomanip library, may only have precision up to certain number of digits even with significant digit change so values may not be correct
 Floating points hard to compare (difficult to store in binary, value may change when precision changes)
-Bool has value of true/false (casting to 0 makes it false, casting to anything else makes it true, std::cin only accepts 0 for false/1 for true, need to set std::boolalpha to use "true"/"false")
+Bool has value of true/false (casting to 0 makes it false, casting to anything else makes it true, std::cin only accepts 0 for false/1 for true, need to set std::boolalpha to use "true"/"false"), always 1 byte
+Char holds single character, always 1 byte
