@@ -18,4 +18,6 @@ Floating point types are decimals (decimal floats depending on number of decimal
 Floating point has default of 6 significant digits, can change with std:setprecision(digits) in iomanip library, may only have precision up to certain number of digits even with significant digit change so values may not be correct
 Floating points hard to compare (difficult to store in binary, value may change when precision changes)
 Bool has value of true/false (casting to 0 makes it false, casting to anything else makes it true, std::cin only accepts 0 for false/1 for true, need to set std::boolalpha to use "true"/"false"), always 1 byte
-Char holds single character, always 1 byte
+Char holds single character (1 byte), integer that stores ASCII encoding of character, can make signed/unsigned and change size like with other integers
+Can convert between data types, compiler might convert itself with implicit type conversion (ex. integer passed to function with double parameter converted to double, double passed to function with integer parameter drops fractional component)
+Explicit type conversion tells compiler to convert from one type to another, use static_cast<new_type>(expression) to convert expression to type of new_type (prevents generation of warnings)
